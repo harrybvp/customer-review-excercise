@@ -25,7 +25,7 @@
 	<bean id="defaultCustomerReviewService" class="de.hybris.platform.customerreview.impl.DefaultCustomerReviewService" parent="abstractBusinessService" scope="tenant">
 		<property name="customerReviewDao" ref="customerReviewDao"/>
 	</bean>
-
+	
 	<alias alias="customerReviewDao" name="defaultCustomerReviewDao"/>
 	<bean id="defaultCustomerReviewDao" class="de.hybris.platform.customerreview.dao.impl.DefaultCustomerReviewDao" parent="abstractItemDao" scope="tenant"/>
 
@@ -39,4 +39,12 @@
 		<property name="searchRestrictionService" ref="searchRestrictionService"/>
 		<property name="configurationService" ref="configurationService"/>
 	</bean>
+
+	
+	<alias alias="customerReviewExcerciseService" name="customerReviewExcerciseService"/>
+	<bean id="customerReviewExcerciseService" class="de.hybris.platform.customerreview.impl.customerReviewExcerciseServiceImpl" scope="tenant">
+	   <property name="curseWords" value="hell,shit,fuck"></property>	
+		<property name="customerReviewService" ref="customerReviewService"/>		
+	</bean>
+	
 </beans>
