@@ -163,7 +163,7 @@ public class CustomerReviewExcerciseServiceImpl implements
 	protected void validateCustomerReviewRatingRange(Double minRating,
 			Double maxRating) throws JaloInvalidParameterException {
 		if ((minRating == null) || (maxRating == null)
-				|| (maxRating.doubleValue() < minRating.doubleValue())) {
+				|| (maxRating.compareTo(minRating) < 0 )) {
 			throw new JaloInvalidParameterException(
 					Localization.getLocalizedString(
 							"error.customerreview.invalidratingrange",
