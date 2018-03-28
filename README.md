@@ -1,6 +1,6 @@
 # Overview of Solution
 1. customerReviewExcerciseService is the bean name defined under [customerreview-spring.xml](customerreview-spring.xml)  implements the requirment given in the assignment.
-1. [CustomerReviewExcerciseService](customerreviewserver.jar.src/de/hybris/platform/customerreview/CustomerReviewExcerciseService.java) is the interface and [CustomerReviewExcerciseServiceImpl](customerreviewserver.jar.src/de/hybris/platform/customerreview/CustomerReviewExcerciseServiceImpl.java) is it's implementation (Refer it's JavaDoc for implementation details)
+1. [CustomerReviewExcerciseService](customerreviewserver.jar.src/de/hybris/platform/customerreview/CustomerReviewExcerciseService.java) is the interface and [CustomerReviewExcerciseServiceImpl](customerreviewserver.jar.src/de/hybris/platform/customerreview/impl/CustomerReviewExcerciseServiceImpl.java) is it's implementation (Refer it's JavaDoc for implementation details)
 1. [Curse Words](https://github.com/harrybvp/customer-review-excercise/blob/e505fd8e200df908849f513da6d47764fff16487/customerreview-spring.xml#L47) are defined in [customerreview-spring.xml](customerreview-spring.xml) and set directly on curseWords property.
 Alternatively I think hybris already has some config file which can be used to store these values and code can use `de.hybris.platform.util.Config.getParameter("cursewords.config.property.name")`
 1. I have defined two variants of `getNumberOfReviews` method one with range provided and one without range reading it from `CustomerReviewConstants`
